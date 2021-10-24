@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.patnox</groupId>
+  <artifactId>shapeshifter</artifactId>
+  <version>5.14.0.0</version>
+  <name>shapeshifter</name>
+
+  <description>shapes string parser</description>
+  <properties>
+    <java.version>11</java.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+
+  <repositories>
+  <!-- 
+    <repository>
+      <id>java-net-repo</id>
+      <url>https://maven.java.net/content/repositories/public/</url>
+    </repository>
+    <repository>
+      <id>jboss-repo</id>
+      <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>spring-repo</id>
+      <url>https://repo.spring.io/release</url>
+    </repository>
+    <repository>
+      <id>local-central</id>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+    <repository>
+      <id>eclipse2-central</id>
+      <url>https://nexus.pentaho.org/content/groups/omni/</url>
+    </repository>
+    <repository>
+      <id>eclipse-central</id>
+      <url>http://dist.wso2.org/maven2/</url>
+    </repository>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+        -->
+    <repository>
+        <id>l2fprod-central</id>
+        <url>http://java.freehep.org/maven2/</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+      <!-- https://mvnrepository.com/artifact/com.l2fprod/l2fprod-common-all -->
+      <!--
+      <dependency>
+	    <groupId>com.l2fprod</groupId>
+	    <artifactId>l2fprod-common-all</artifactId>
+	    <version>6.9.1</version>
+	  </dependency>
+	  -->
+      <!-- https://mvnrepository.com/artifact/jgraph/jgraph -->
+      <!--
+      <dependency>
+          <groupId>jgraph</groupId>
+          <artifactId>jgraph</artifactId>
+          <version>5.13.0.0</version>
+      </dependency>
+      -->
+      <!-- https://mvnrepository.com/artifact/com.github.vlsi.mxgraph/jgraphx -->
+      <dependency>
+          <groupId>com.github.vlsi.mxgraph</groupId>
+          <artifactId>jgraphx</artifactId>
+          <version>4.2.2</version>
+      </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.11</version>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+	  <artifactId>maven-assembly-plugin</artifactId>
+	  <version>3.3.0</version>
+	  <configuration>
+	    <archive>
+	      <manifest>
+		<mainClass>com.patnox.shapes.Core</mainClass>
+	      </manifest>
+	    </archive>
+	    <descriptorRefs>
+	      <descriptorRef>jar-with-dependencies</descriptorRef>
+	    </descriptorRefs>
+	    <appendAssemblyId>false</appendAssemblyId>
+	  </configuration>
+	  <executions>
+	    <execution>
+	      <id>make-assembly</id>
+	      <phase>package</phase>
+	      <goals>
+		<goal>single</goal>
+	      </goals>
+	    </execution>
+	  </executions>
+	</plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <configuration>
+		<archive>
+		  <manifest>
+		    <addClasspath>true</addClasspath>
+		    <classpathPrefix>lib/</classpathPrefix>
+		    <mainClass>com.patnox.shapeshifter.Parser</mainClass>
+		  </manifest>
+		</archive>
+      	  </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+    	<plugin>
+	  <artifactId>maven-assembly-plugin</artifactId>
+	  <version>3.3.0</version>
+	  <configuration>
+	    <archive>
+	      <manifest>
+		<mainClass>com.patnox.shapeshifter.Parser</mainClass>
+	      </manifest>
+	    </archive>
+	    <descriptorRefs>
+	      <descriptorRef>jar-with-dependencies</descriptorRef>
+	    </descriptorRefs>
+	    <appendAssemblyId>false</appendAssemblyId>
+	  </configuration>
+	  <executions>
+	    <execution>
+	      <id>make-assembly</id>
+	      <phase>package</phase>
+	      <goals>
+		<goal>single</goal>
+	      </goals>
+	    </execution>
+	  </executions>
+	</plugin>
+    </plugins>
+  </build>
+</project>
