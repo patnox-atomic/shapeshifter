@@ -22,7 +22,7 @@ public class TreeView extends JFrame
 
     public TreeView(Shape unit)
     {
-        super("Tree Draw");
+        super("Shape Shift Drifter");
 
         FoldableTree graph = new FoldableTree();
 

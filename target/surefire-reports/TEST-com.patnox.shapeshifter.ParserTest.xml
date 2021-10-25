@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.patnox.shapeshifter.ParserTest" time="0.13" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.patnox.shapeshifter.ParserTest" time="0.059" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/java/jdk1.8.0_241-amd64/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/surefire/surefirebooter2862563410916859969.jar /opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/surefire 2021-10-24T22-28-03_830-jvmRun1 surefire1013908204881826018tmp surefire_03774996016939892606tmp"/>
+    <property name="sun.java.command" value="/opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/surefire/surefirebooter3201156184883163674.jar /opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/surefire 2021-10-25T07-55-21_509-jvmRun1 surefire7966354118110804637tmp surefire_01496521076801886037tmp"/>
     <property name="surefire.test.class.path" value="/opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/test-classes:/opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/classes:/root/.m2/repository/com/github/vlsi/mxgraph/jgraphx/4.2.2/jgraphx-4.2.2.jar:/root/.m2/repository/junit/junit/4.11/junit-4.11.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/root"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/surefire/surefirebooter2862563410916859969.jar"/>
+    <property name="surefire.real.class.path" value="/opt/work/patnox/CVS/2021/hava/language-parser/java/shapeshifter/target/surefire/surefirebooter3201156184883163674.jar"/>
     <property name="sun.boot.class.path" value="/usr/java/jdk1.8.0_241-amd64/jre/lib/resources.jar:/usr/java/jdk1.8.0_241-amd64/jre/lib/rt.jar:/usr/java/jdk1.8.0_241-amd64/jre/lib/sunrsasign.jar:/usr/java/jdk1.8.0_241-amd64/jre/lib/jsse.jar:/usr/java/jdk1.8.0_241-amd64/jre/lib/jce.jar:/usr/java/jdk1.8.0_241-amd64/jre/lib/charsets.jar:/usr/java/jdk1.8.0_241-amd64/jre/lib/jfr.jar:/usr/java/jdk1.8.0_241-amd64/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_241-b07"/>
@@ -57,14 +57,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="parseTestGoodString" classname="com.patnox.shapeshifter.ParserTest" time="0.05"/>
-  <testcase name="parseTestCircleLabel" classname="com.patnox.shapeshifter.ParserTest" time="0.001"/>
+  <testcase name="parseTestGoodString" classname="com.patnox.shapeshifter.ParserTest" time="0.022"/>
+  <testcase name="parseTestCircleLabel" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
   <testcase name="parseTestNoShapes" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
   <testcase name="testThrow" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
-  <testcase name="parseTestSquareLabel" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
-  <testcase name="parseTestDelimiterMismatch" classname="com.patnox.shapeshifter.ParserTest" time="0.001"/>
+  <testcase name="parseTestSquareLabel" classname="com.patnox.shapeshifter.ParserTest" time="0.001"/>
+  <testcase name="parseTestDelimiterMismatch" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
   <testcase name="parseTestEmptyString" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
   <testcase name="parseTestIllegalChars" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
-  <testcase name="parseTestNoLabel" classname="com.patnox.shapeshifter.ParserTest" time="0.001"/>
+  <testcase name="parseTestNoLabel" classname="com.patnox.shapeshifter.ParserTest" time="0"/>
   <testcase name="parseTestSquaresCanOnlyContainSquares" classname="com.patnox.shapeshifter.ParserTest" time="0.001"/>
 </testsuite>
