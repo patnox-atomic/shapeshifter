@@ -1,8 +1,11 @@
 ## Design & Implement Shapes Parser
+
+```sh
     Use the programming language of your role:
         ● Android - use Java
         ● IOS - use Swift
         ● Backend - use PHP
+```
 
 ### Overview
 This interview assignment asks you to implement a parser that will parse a contrived syntax
@@ -14,9 +17,17 @@ objects). The following illustration can help to explain:
 
 
 The illustration above shows what would happen when you execute the parse function with the
-string "​ [12](BALL(INK[1[35]](CHARLIE)))​ " - as you can see, it returns a container that
+string 
+
+```sh
+"​[12](BALL(INK[1[35]](CHARLIE)))​"
+```
+
+ - as you can see, it returns a container that
 has two shapes: a square and a circle, the circle has its own shapes and so on and so forth.Parser Rules
 These are the rules of the parser. Be sure to refer to this when implementing the parser.
+
+```sh
     ● The shapes syntax language consists of shapes: squares and circles.
     ● Each shape has a start symbol, a label, zero or more inner shapes, and the end symbol.
         Examples: ​ ​ [1]​ or ​ (HELLO) ​ or​ (BOY[12]) ​ or​ (APPLE(MAN)[65])
@@ -30,8 +41,11 @@ These are the rules of the parser. Be sure to refer to this when implementing th
     ● Circles are labeled with ​ uppercase letters only​ .
     ● Circles can contain squares or other circles.
     ● If the input is invalid, an exception is thrown.
+```
 
 ### Requirements
+
+```sh
     1. Design data structures
         a. Think object oriented design
         b. Think of all the classes you need and their properties and their relationships.
@@ -47,10 +61,13 @@ These are the rules of the parser. Be sure to refer to this when implementing th
         b. Think of other tests and implement them.
     5. Submit a zip file containing all of the code (including project
         files)Example Tests
+```
 
 The following are some tests to help you test the validity of your parser. You are expected to
 implement enough tests to ensure that your parser works. This is not enough tests to validate
 your parser, you are expected to start with this and add more.
+
+```sh
     ● Valid inputs include:
         ○ A square: ​ [13]
         ○ A circle: ​ (DOG)
@@ -60,7 +77,11 @@ your parser, you are expected to start with this and add more.
         ○ Malformed input:​ [13​ )
         ○ Invalid inner shape: ​ [72​ (HELLO)​ ]
         ○ Invalid label (lower case): ​ [ ​ allow​ ]
+        
+```
 
-PLEASE NOTE: This exercise is for the sole purpose of determining your skills. The
+###PLEASE NOTE: 
+
+This exercise is for the sole purpose of determining your skills. The
 purpose of this exercise is to showcase your design, coding, and testing skills in the
 given time span. Please read the complete requirements carefully and do your best.
