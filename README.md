@@ -80,8 +80,42 @@ your parser, you are expected to start with this and add more.
         
 ```
 
-###PLEASE NOTE: 
+### PLEASE NOTE: 
 
 This exercise is for the sole purpose of determining your skills. The
 purpose of this exercise is to showcase your design, coding, and testing skills in the
 given time span. Please read the complete requirements carefully and do your best.
+
+
+### SOLUTION
+
+The solution was designed using Java and the jgraphx library for visual tree display.
+The Data Structure used is a Generic Tree which is a special type of Graph Data Structure.
+Multiple tests exist to verify that the solution satisfies the specifications.
+Powered by Maven
+
+#### Compile
+
+```sh
+$ mvn clean package
+```
+
+#### Test
+
+```sh
+$ mvn clean test
+```
+
+#### Run
+
+```sh
+$ java -jar target/shapeshifter-5.14.0.0.jar
+```
+
+
+
+
+
+
+
+
